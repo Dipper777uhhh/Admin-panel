@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli</title>
+</head>
+<body>
+    <h2>Admin Paneli</h2>
+    <h3>VIP Paketlər:</h3>
+    <ul>
+        <% vipList.forEach(vip => { %>
+            <li><%= vip.name %> - <%= vip.price %></li>
+        <% }); %>
+    </ul>
+    
+    <h3>Ödəniş Qəbzləri:</h3>
+    <ul>
+        <% receipts.forEach(receipt => { %>
+            <li><%= receipt.details %> - <%= receipt.amount %></li>
+        <% }); %>
+    </ul>
+
+    <a href="/logout">Çıxış</a>
+</body>
+</html>
